@@ -25,7 +25,7 @@ The service will be responsible for collecting, storing and delivering data for 
 3. Deleiver data for dashboards, reports or user request from UI
 
 ### System Architecture Diagram
-![System Architecture](images/System%20Diagram.png)
+![System Architecture](images/CorrectedDiagram.drawio.png)
 
 ## Technology Stack and Communication
 * **Appointment management service**: C# (.NET Core) + SignalR for WebSocket, PostgreSQL, Redis (Cache)
@@ -37,4 +37,150 @@ The service will be responsible for collecting, storing and delivering data for 
 **Inter-service communication**: there will be transferred data about income from different doctor appointments and then will be used for reporting and analysis.
 
 ## Data Management
+### Core endpoints for Appointment management service:
+1. **POST/appointments**:
+Allows patient to make a request for doctor appointment:
+```
+{
+  "patientId": "12345",
+  "doctorId": "56789",
+  "preferredTime": "2024-09-20T15:00:00",
+  "reason": "Routine Check-up"
+}
+```
+As a success result returns appointment id, as failure returns error message.
+**Success**:
+```
+{
+  "status": "success",
+  "appointmentId": "abc123",
+  "message": "Appointment request submitted successfully and waits for confirmation."
+}
+```
+**Failure**:
+```
+{
+  "status": "error",
+  "message": "Unable to request an appointment."
+}
+```
+
+2. **GET /appointments/{doctorId}**:
+Allows doctors to retrive pending appointment requests.
+
+**Success**:
+```
+{
+  "status": "success",
+  "appointments": [
+    {
+      "appointmentId": "abc123",
+      "patientId": "12345",
+      "patientName": "John Doe",
+      "preferredTime": "2024-09-20T15:00:00",
+      "reason": "Routine Check-up"
+    },
+    {
+      "appointmentId": "def456",
+      "patientId": "67890",
+      "patientName": "Jane Smith",
+      "preferredTime": "2024-09-21T09:00:00",
+      "reason": "Follow-up Consultation"
+    }
+  ]
+}
+```
+
+**Failure**:
+```
+{
+  "status": "error",
+  "message": "No pending appointments for this doctor."
+}
+```
+3. **PUT /appointments/{appointmentId}**:
+Allows doctor to accept or reject the requested appointment.
+
+**Accept**:
+```
+{
+  "status": "accepted",
+  "confirmedTime": "2024-09-20T15:00:00"
+}
+```
+
+**Reject**:
+
+```
+{
+  "status": "rejected",
+  "reason": "Doctor unavailable at the preferred time."
+}
+```
+
+### Core endpoints for Analytical service:
+1. **GET /reports/doctor-performance**:
+Returns the performance metrics for a particular doctor.
+
+**Success**:
+```
+{
+  "status": "success",
+  "doctorId": "56789",
+  "doctorName": "Dr. Jane Doe",
+  "startDate": "2024-09-01",
+  "endDate": "2024-09-30",
+  "performanceMetrics": {
+    "totalCSections": 5,
+    "totalNaturalBirths": 10,
+    "totalWorkingDays": 22,
+    "averagePatientSatisfaction": 4.8
+  }
+}
+```
+**Failure**:
+```
+{
+  "status": "error",
+  "message": "No data found for the specified doctor or date range."
+}
+```
+
+2. **GET /reports/revenue**:
+Returns profit and revenue metrics for maternity hospital.
+
+**Success**:
+```
+{
+  "status": "success",
+  "startDate": "2024-01-01",
+  "endDate": "2024-09-30",
+  "totalRevenue": 1000000,
+  "totalProfit": 300000,
+  "profitMargin": 0.3,
+  "departmentBreakdown": {
+    "maternity": {
+      "revenue": 600000,
+      "profit": 150000,
+      "profitMargin": 0.25
+    },
+    "surgery": {
+      "revenue": 400000,
+      "profit": 150000,
+      "profitMargin": 0.375
+    }
+  }
+}
+```
+
+**Failure**:
+```
+{
+  "status": "error",
+  "message": "No revenue data available for the specified period or department."
+}
+```
+
 ## Deployment
+
+Docker Compose will be used for project deployment. Each service will be containerized, ensuring that dependencies are isolated and consistent across different environments. Docker Compose simplifies running, scaling, and managing the services by defining them in a single docker-compose.yml file, making it easy to deploy, stop, and scale your microservice architecture.
