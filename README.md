@@ -25,7 +25,7 @@ The service will be responsible for collecting, storing and delivering data for 
 3. Deleiver data for dashboards, reports or user request from UI
 
 ### System Architecture Diagram
-![System Architecture](images/CorrectedDiagram.drawio.png)
+![System Architecture](images/SustemArchitecture.png)
 
 ## Technology Stack and Communication
 * **Appointment management service**: C# (.NET Core) + SignalR for WebSocket, PostgreSQL, Redis (Cache)
