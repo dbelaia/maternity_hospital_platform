@@ -25,7 +25,7 @@ The service will be responsible for collecting, storing and delivering data for 
 3. Deleiver data for dashboards, reports or user request from UI
 
 ### System Architecture Diagram
-![System Architecture](images/SustemArchitecture.png)
+![System Architecture](images/System_Arch.png)
 
 ## Technology Stack and Communication
 * **Appointment management service**: C# (.NET Core) + SignalR for WebSocket, PostgreSQL, Redis (Cache)
@@ -33,6 +33,7 @@ The service will be responsible for collecting, storing and delivering data for 
 * **API Gateway**: Python (FastAPI)
 * **User-service communication**: RESTful API
 * **Inter-service communication**: gRPC (data will be transaferd in Protobuf format)
+* **Testing**: MSTest framework
 
 **Inter-service communication**: there will be transferred data about income from different doctor appointments and then will be used for reporting and analysis.
 
@@ -184,3 +185,9 @@ Returns profit and revenue metrics for maternity hospital.
 ## Deployment
 
 Docker Compose will be used for project deployment. Each service will be containerized, ensuring that dependencies are isolated and consistent across different environments. Docker Compose simplifies running, scaling, and managing the services by defining them in a single docker-compose.yml file, making it easy to deploy, stop, and scale your microservice architecture.
+
+## Scalability
+Horizontal scalability - Analytical service can be extended and separated on smaller and independent services to handle new kinds of statistics.
+
+## Monitoring
+Grafana  - to monitor different kinds of errors and, also, health check of the services. Alerts can be sent in slack channel to make them visible or we can have Grafana dasboards as well.
