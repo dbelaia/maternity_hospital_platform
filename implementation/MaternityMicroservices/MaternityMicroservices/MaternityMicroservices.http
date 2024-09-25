@@ -1,0 +1,6 @@
+@MaternityMicroservices_HostAddress = http://localhost:5062
+
+GET {{MaternityMicroservices_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
