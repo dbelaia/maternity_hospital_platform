@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.VisualBasic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MaternityMicroservices.Models
 {
@@ -9,6 +10,6 @@ namespace MaternityMicroservices.Models
         public String FirstName { set; get; }
         public String LastName { set; get; }
         public String Sex { set; get; }
-        public DateOnly DateOfBirth { set; get; }
+        public String DateOfBirth { set; get; }
     }
 }

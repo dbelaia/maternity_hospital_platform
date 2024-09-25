@@ -11,8 +11,7 @@ namespace MaternityMicroservices.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "AppointmentHistory",
+            migrationBuilder.CreateTable(                name: "AppointmentHistory",
                 columns: table => new
                 {
                     AppointmentHistoryRecordID = table.Column<int>(type: "int", nullable: false)

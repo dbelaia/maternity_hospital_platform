@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MaternityMicroservices")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e8c1899ee5cb2b117a78f9a454faa1c11509698")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f3df632efbdc13f807863c55f433170e9c6f627")]
 [assembly: System.Reflection.AssemblyProductAttribute("MaternityMicroservices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MaternityMicroservices")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
