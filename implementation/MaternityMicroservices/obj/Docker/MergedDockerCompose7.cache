@@ -1,0 +1,48 @@
+name: dockercompose6539563444342529584
+services:
+  db:
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Express
+      SA_PASSWORD: YourStrongPassword!
+    image: mcr.microsoft.com/mssql/server:2019-latest-windowsservercore
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1433"
+        protocol: tcp
+  maternitymicroservices:
+    build:
+      context: C:\Users\Dia\PAD\maternity_hospital_platform\implementation\MaternityMicroservices
+      dockerfile: MaternityMicroservices/Dockerfile
+    depends_on:
+      db:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      SQL_AUTHENTICATION: Windows
+      SQL_PASSWORD: ""
+      SQL_SERVER: host.docker.internal
+      SQL_USER: ""
+    image: maternitymicroservices
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "8000"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+    volumes:
+      - type: npipe
+        source: \\.\pipe\sql\query
+        target: \\.\pipe\sql\query
+networks:
+  default:
+    name: dockercompose6539563444342529584_default

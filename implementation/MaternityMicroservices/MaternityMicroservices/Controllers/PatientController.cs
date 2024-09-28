@@ -45,28 +45,5 @@ namespace MaternityMicroservices.Controllers
                 return CreatedAtAction(nameof(Get), new { id = patient.PatientID }, patient); // Use patient.PatientId to create the resource location
             }
         }
-
-        // PUT api/patient
-        [HttpPut]
-        public IActionResult Put([FromBody] Patient patient)
-        {
-            if (patient == null)
-            {
-                return BadRequest(); // Return 400 if the request body is invalid
-            }
-
-            var existingPatient = _patientRepository.GetPatientById(patient.PatientID);
-            if (existingPatient == null)
-            {
-                return NotFound(); // Return 404 if the patient does not exist
-            }
-
-            using (var scope = new TransactionScope())
-            {
-                _patientRepository.UpdatePatient(patient); // Update the patient directly
-                scope.Complete();
-                return Ok(); // Return 200 OK if the update was successful
-            }
-        }
     }
 }
