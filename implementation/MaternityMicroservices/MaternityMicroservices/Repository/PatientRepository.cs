@@ -21,22 +21,15 @@ namespace MaternityMicroservices.Repository
         }
 
         // Retrieve a patient by their ID
-        public Patient GetPatientById(int patientId)
+        public Patient GetPatientById(int PatientID)
         {
-            return _dbContext.Patients.Find(patientId);
+            return _dbContext.Patients.Find(PatientID);
         }
 
         // Insert a new patient into the database
         public void InsertPatient(Patient patient)
         {
             _dbContext.Patients.Add(patient);
-            Save();
-        }
-
-        // Update an existing patient record in the database
-        public void UpdatePatient(Patient patient)
-        {
-            _dbContext.Entry(patient).State = EntityState.Modified;
             Save();
         }
 

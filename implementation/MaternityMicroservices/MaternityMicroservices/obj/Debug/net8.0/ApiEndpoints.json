@@ -17,22 +17,6 @@
   },
   {
     "ContainingType": "MaternityMicroservices.Controllers.PatientController",
-    "Method": "Put",
-    "RelativePath": "api/Patient",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "patient",
-        "Type": "MaternityMicroservices.Models.Patient",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MaternityMicroservices.Controllers.PatientController",
     "Method": "Get",
     "RelativePath": "api/Patient/{id}",
     "HttpMethod": "GET",
