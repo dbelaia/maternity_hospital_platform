@@ -79,6 +79,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AnalyticsService.Controllers.HealthCheckController",
+    "Method": "Get",
+    "RelativePath": "api/HealthCheck",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AnalyticsService.Controllers.OperationController",
     "Method": "Post",
     "RelativePath": "api/Operation",
