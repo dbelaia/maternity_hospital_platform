@@ -19,6 +19,7 @@ namespace AppointmentService.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Doctor>> Get(int id)
         {
+            // make sleep
             var doctor = await _doctorRepository.GetDoctorById(id);
             if (doctor == null)
             {

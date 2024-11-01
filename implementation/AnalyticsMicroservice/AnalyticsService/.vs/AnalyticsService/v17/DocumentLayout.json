@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\analyticsmicroservice\\analyticsservice\\controllers\\healthcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|solutionrelative:controllers\\healthcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\analyticsmicroservice\\analyticsservice\\repository\\healthcheckservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|solutionrelative:repository\\healthcheckservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\analyticsmicroservice\\analyticsservice\\repository\\ihealthcheckservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|solutionrelative:repository\\ihealthcheckservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\analyticsmicroservice\\analyticsservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\analyticsmicroservice\\analyticsservice\\repository\\doctorinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|solutionrelative:repository\\doctorinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\analyticsmicroservice\\analyticsservice\\repository\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|solutionrelative:repository\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\analyticsmicroservice\\analyticsservice\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|solutionrelative:controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\analyticsmicroservice\\analyticsservice\\repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69F119B3-47A5-48FA-9AA2-21BBA13E7B38}|AnalyticsService.csproj|solutionrelative:repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T17:35:15.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HealthCheckController.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Controllers\\HealthCheckController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HealthCheckController.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Controllers\\HealthCheckController.cs",
+              "RelativeToolTip": "Controllers\\HealthCheckController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T17:34:32.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Repository\\TaskManager.cs",
+              "RelativeDocumentMoniker": "Repository\\TaskManager.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Repository\\TaskManager.cs",
+              "RelativeToolTip": "Repository\\TaskManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T17:28:08.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HealthCheckService.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Repository\\HealthCheckService.cs",
+              "RelativeDocumentMoniker": "Repository\\HealthCheckService.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Repository\\HealthCheckService.cs",
+              "RelativeToolTip": "Repository\\HealthCheckService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T17:27:32.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IHealthCheckService.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Repository\\IHealthCheckService.cs",
+              "RelativeDocumentMoniker": "Repository\\IHealthCheckService.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Repository\\IHealthCheckService.cs",
+              "RelativeToolTip": "Repository\\IHealthCheckService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T17:26:30.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DoctorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Repository\\DoctorRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\DoctorRepository.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Repository\\DoctorRepository.cs",
+              "RelativeToolTip": "Repository\\DoctorRepository.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAkwHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T17:22:41.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DoctorInterface.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Repository\\DoctorInterface.cs",
+              "RelativeDocumentMoniker": "Repository\\DoctorInterface.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Repository\\DoctorInterface.cs",
+              "RelativeToolTip": "Repository\\DoctorInterface.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T17:21:16.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AnalyticsMicroservice\\AnalyticsService\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "Controllers\\DoctorController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T07:06:21.862Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4677A37-A231-4E29-BB6E-C0D6000E146F}|AppointmentService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\appointmentservice\\appointmentservice\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4677A37-A231-4E29-BB6E-C0D6000E146F}|AppointmentService.csproj|solutionrelative:controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4677A37-A231-4E29-BB6E-C0D6000E146F}|AppointmentService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\appointmentservice\\appointmentservice\\repository\\appointmenthistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4677A37-A231-4E29-BB6E-C0D6000E146F}|AppointmentService.csproj|solutionrelative:repository\\appointmenthistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4677A37-A231-4E29-BB6E-C0D6000E146F}|AppointmentService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\appointmentservice\\appointmentservice\\repository\\appointmenthistoryinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4677A37-A231-4E29-BB6E-C0D6000E146F}|AppointmentService.csproj|solutionrelative:repository\\appointmenthistoryinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4677A37-A231-4E29-BB6E-C0D6000E146F}|AppointmentService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\appointmentservice\\appointmentservice\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4677A37-A231-4E29-BB6E-C0D6000E146F}|AppointmentService.csproj|solutionrelative:controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4677A37-A231-4E29-BB6E-C0D6000E146F}|AppointmentService.csproj|c:\\users\\dia\\pad\\maternity_hospital_platform\\implementation\\appointmentservice\\appointmentservice\\controllers\\appointmenthistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4677A37-A231-4E29-BB6E-C0D6000E146F}|AppointmentService.csproj|solutionrelative:controllers\\appointmenthistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppointmentHistoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\Repository\\AppointmentHistoryRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\AppointmentHistoryRepository.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\Repository\\AppointmentHistoryRepository.cs",
+              "RelativeToolTip": "Repository\\AppointmentHistoryRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:55:04.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppointmentHistoryInterface.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\Repository\\AppointmentHistoryInterface.cs",
+              "RelativeDocumentMoniker": "Repository\\AppointmentHistoryInterface.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\Repository\\AppointmentHistoryInterface.cs",
+              "RelativeToolTip": "Repository\\AppointmentHistoryInterface.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:55:01.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "Controllers\\DoctorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:54:39.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppointmentHistoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\Controllers\\AppointmentHistoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AppointmentHistoryController.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\Controllers\\AppointmentHistoryController.cs",
+              "RelativeToolTip": "Controllers\\AppointmentHistoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:54:38.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\Dia\\PAD\\maternity_hospital_platform\\implementation\\AppointmentService\\AppointmentService\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAA5wEsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T20:35:45.159Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

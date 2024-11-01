@@ -1,7 +1,7 @@
 ﻿using AppointmentService.Models;
 using AppointmentService.Repository;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 
 namespace AppointmentService.Controllers
 {
@@ -20,6 +20,7 @@ namespace AppointmentService.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Appointment>> Get(int id)
         {
+            await Task.Delay(11000);
             var appointment = await _appointmentRepository.GetAppointmentById(id);
             if (appointment == null)
             {

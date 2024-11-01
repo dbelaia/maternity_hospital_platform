@@ -1,6 +1,19 @@
 # Maternity Hospital Platform
 Maternity Hospital Platform is a distributed system which serves a private maternity hospital with a focus on two main directions: an ability to create a doctor appointment for patients and provide the set of real-time dashboards and reports for key stakeholders and head (business) department. 
 
+## Set up instructions
+To run the application we need to build and run out micriservices and buil/run API Gateway.
+
+1. Activate environment for API Gateway:
+```
+.\venv\Scripts\activate   
+```
+2. Reload API Gateway:
+```
+uvicorn gateway:app --reload    
+```
+3. Test application via Postman
+
 ## Microservice Architecture Suitability 
 As it was already meantioned, the project will cover two pretty independant core functionalities - ordering doctor appointment online and provideing statistics for key stakeholders. That is why microservice artitecture is the best choice to separate those functionalities on two services which will process its data, store it in their own databases and which will be independent in terms of development, deployment ans scaling. It is planned to have at least tree levels of users: 
 
@@ -23,9 +36,11 @@ The service will be responsible for collecting, storing and delivering data for 
 1. Collect data from different sources. It is planned to process data from the cloud (GCS bucket with CSV files );
 2. Store the data in Analytics service database;
 3. Deleiver data for dashboards, reports or user request from UI
+4. Run job which will update all replicas once per day
+5. Delivar data for Datawarehouse for further business reporting
 
 ### System Architecture Diagram
-![System Architecture](images/System_Arch.png)
+![System Architecture](images/Lab_2_System_Architecture.png)
 
 ## Technology Stack and Communication
 * **Appointment management service**: C# (.NET Core) + SignalR for WebSocket, PostgreSQL, Redis (Cache)
@@ -34,160 +49,88 @@ The service will be responsible for collecting, storing and delivering data for 
 * **User-service communication**: RESTful API
 * **Inter-service communication**: gRPC (data will be transaferd in Protobuf format)
 * **Testing**: MSTest framework
+* **Logging**: ELK stack
+* **Datawarehouse**: SQL Server with materiakized views for reporting
+* **ETL**: Microsoft SSIS
 
 **Inter-service communication**: there will be transferred data about income from different doctor appointments and then will be used for reporting and analysis.
 
 ## Data Management
 ### Core endpoints for Appointment management service:
-1. **POST/appointments**:
-Allows patient to make a request for doctor appointment:
-```
-{
-  "patientId": "12345",
-  "doctorId": "56789",
-  "preferredTime": "2024-09-20T15:00:00",
-  "reason": "Routine Check-up"
-}
-```
-As a success result returns appointment id, as failure returns error message.
-**Success**:
-```
-{
-  "status": "success",
-  "appointmentId": "abc123",
-  "message": "Appointment request submitted successfully and waits for confirmation."
-}
-```
-**Failure**:
-```
-{
-  "status": "error",
-  "message": "Unable to request an appointment."
-}
-```
+1. **POST/doctor**:
+Add new doctor to the system: http://localhost:8000/doctor
 
-2. **GET /appointments/{doctorId}**:
-Allows doctors to retrive pending appointment requests.
-
-**Success**:
+Responce:
 ```
 {
-  "status": "success",
-  "appointments": [
-    {
-      "appointmentId": "abc123",
-      "patientId": "12345",
-      "patientName": "John Doe",
-      "preferredTime": "2024-09-20T15:00:00",
-      "reason": "Routine Check-up"
-    },
-    {
-      "appointmentId": "def456",
-      "patientId": "67890",
-      "patientName": "Jane Smith",
-      "preferredTime": "2024-09-21T09:00:00",
-      "reason": "Follow-up Consultation"
-    }
-  ]
+  "firstName": "Diana",
+  "lastName": "Belaia",
+  "sex": "M",
+  "occupation": "Obstetrician",
+  "dateOfBirth": "2002-08-18"
+}
+```
+2. **PUT/doctor/Id**:
+Update doctor info:
+http://localhost:8000/doctor/5
+
+Responce:
+```
+{
+  "doctorID": 5,
+  "firstName": "Samvel",
+  "lastName": "Bareian",
+  "sex": "M",
+  "occupation": "Obstetrician",
+  "dateOfBirth": "1999-08-18"
 }
 ```
 
-**Failure**:
+3. **GET /appointment/{Id}**:
+Get appointment: http://localhost:8000/appointmenthistory/2
+
+Responce:
 ```
 {
-  "status": "error",
-  "message": "No pending appointments for this doctor."
+  "appointmentName": "Diana",
+  "price": 10000
 }
 ```
-3. **PUT /appointments/{appointmentId}**:
-Allows doctor to accept or reject the requested appointment.
+### Core endpoints for Appointment management service:
+1. **GET /operation/{Id}**:
+Get operation by Id: http://localhost:8000/operation/3
 
-**Accept**:
+Responce:
 ```
 {
-  "status": "accepted",
-  "confirmedTime": "2024-09-20T15:00:00"
+  "operationName": "C-section",
+  "price": 40000
 }
 ```
+2. **POST /operation/**:
+Insert new operation: http://localhost:8000/operation
 
-**Reject**:
-
+Body:
 ```
 {
-  "status": "rejected",
-  "reason": "Doctor unavailable at the preferred time."
+  "operationName": "C-section",
+  "price": 40000
 }
 ```
+3. **PUT /operation/{Id}**:
+Update operation info: http://localhost:8000/operation/5
 
-### Core endpoints for Analytical service:
-1. **GET /reports/doctor-performance**:
-Returns the performance metrics for a particular doctor.
-
-**Success**:
+Body:
 ```
 {
-  "status": "success",
-  "doctorId": "56789",
-  "doctorName": "Dr. Jane Doe",
-  "startDate": "2024-09-01",
-  "endDate": "2024-09-30",
-  "performanceMetrics": {
-    "totalCSections": 5,
-    "totalNaturalBirths": 10,
-    "totalWorkingDays": 22,
-    "averagePatientSatisfaction": 4.8
-  }
+  "operationID": 5,
+  "operationName": "C-section",
+  "price": 30000
 }
 ```
-**Failure**:
-```
-{
-  "status": "error",
-  "message": "No data found for the specified doctor or date range."
-}
-```
-
-2. **GET /reports/revenue**:
-Returns profit and revenue metrics for maternity hospital.
-
-**Success**:
-```
-{
-  "status": "success",
-  "startDate": "2024-01-01",
-  "endDate": "2024-09-30",
-  "totalRevenue": 1000000,
-  "totalProfit": 300000,
-  "profitMargin": 0.3,
-  "departmentBreakdown": {
-    "maternity": {
-      "revenue": 600000,
-      "profit": 150000,
-      "profitMargin": 0.25
-    },
-    "surgery": {
-      "revenue": 400000,
-      "profit": 150000,
-      "profitMargin": 0.375
-    }
-  }
-}
-```
-
-**Failure**:
-```
-{
-  "status": "error",
-  "message": "No revenue data available for the specified period or department."
-}
-```
-
 ## Deployment
 
 Docker Compose will be used for project deployment. Each service will be containerized, ensuring that dependencies are isolated and consistent across different environments. Docker Compose simplifies running, scaling, and managing the services by defining them in a single docker-compose.yml file, making it easy to deploy, stop, and scale your microservice architecture.
 
 ## Scalability
 Horizontal scalability - Analytical service can be extended and separated on smaller and independent services to handle new kinds of statistics.
-
-## Monitoring
-Grafana  - to monitor different kinds of errors and, also, health check of the services. Alerts can be sent in slack channel to make them visible or we can have Grafana dasboards as well.
